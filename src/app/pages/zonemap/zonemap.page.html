@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Zone Map</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button [routerLink]="['/loginform']">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Select Zone</ion-label>
+          <ion-select interface="popover" value="183" placeholder="Select Zone">
+            <ion-select-option value="181">Bistro Guillaume</ion-select-option>
+            <ion-select-option value="182">Ging Thai - Terrace</ion-select-option>
+            <ion-select-option value="183">Nobu</ion-select-option>
+            <ion-select-option value="197">Spice Temple</ion-select-option>
+            <ion-select-option value="184">Rockpool</ion-select-option>
+            <ion-select-option value="185">Rosetta</ion-select-option>
+            <ion-select-option value="186">Gradi</ion-select-option>
+            <ion-select-option value="187">Merrywell - Ground</ion-select-option>
+            <ion-select-option value="188">The Atlantic - Ground</ion-select-option>
+            <ion-select-option value="189">Riverside</ion-select-option>
+            <ion-select-option value="190">Food Court</ion-select-option>
+            <ion-select-option value="191">The Pub</ion-select-option>
+            <ion-select-option value="192">Emporio Della Pasta</ion-select-option>
+            <ion-select-option value="193">Kitchen Workshop</ion-select-option>
+            <ion-select-option value="194">Loading Dock</ion-select-option>
+            <ion-select-option value="195">Lucky Chan</ion-select-option>
+            <ion-select-option value="196">Cervo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Select Date Range</ion-label>
+          <!-- <ion-input value="10.01.2022 - 17.01.2022" id="open-modal"></ion-input> -->
+          <ion-datetime presentation="date" value="2022-01-20"></ion-datetime>
+          <ion-icon name="calendar-outline" slot="end"></ion-icon>
+          <!-- <ion-modal trigger="open-modal">
+			  <ng-template>
+			    <ion-content>
+			      <ion-datetime></ion-datetime>
+			    </ion-content>
+			  </ng-template>
+			</ion-modal> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+    <ion-card>
+      <img src="assets/images/zone-map-act.png" />
+    </ion-card>
+    <!-- <highcharts-chart
+      style="margin: 30px;"
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+    ></highcharts-chart> -->
+  </div>
+</ion-content>
+<ion-footer class="ion-padding">
+  <ion-toolbar>
+    <ion-button expand="full" fill="solid" shape="round" [routerLink]="['/feedback']" class="btn-secondary">SUBMIT FEEDBACK</ion-button>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

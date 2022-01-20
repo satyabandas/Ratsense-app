@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Feedback</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked"><b>Comment</b></ion-label>
+    <ion-textarea rows="6" cols="20" placeholder="Enter any comments here..."></ion-textarea>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked"><b>Upload Photos</b></ion-label>
+  </ion-item>
+  <ion-grid>
+    <ion-row class="ion-align-items-start">
+      <ion-col size="3">
+        <span class="icon-camera" (click)="openCamera();">
+          <ion-icon name="camera-outline"></ion-icon>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </span>
+      </ion-col>
+      <ion-col size="3">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-col>
+      <ion-col size="3">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="btn-wrap mt-80">
+    <ion-button (click)="showAlert()" expand="full" fill="solid" shape="round" class="btn-secondary">Submit Feedback</ion-button>
+  </div>
+</ion-content>

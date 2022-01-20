@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sites</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button [routerLink]="['/loginform']">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)" value="map">
+      <ion-segment-button value="map" class="orng-clr">
+        MAP VIEW
+      </ion-segment-button>
+      <ion-segment-button value="listing">
+        SITES LISTING
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div [style.display]="selectedSegment == 'map' ? 'block' : 'none'">
+    <div #map id="map"></div>
+  </div>
+  <ion-list *ngIf="selectedSegment == 'listing'">
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Crown
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Main Complex - Ground Level
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Main Complex - Level One
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Main Complex - Level Three
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Main Complex - Level 4 &amp; Roof
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Main Complex - Mezzanine
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Metropol - Ground Level
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Metropol - Level One
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Clarke Street - Ground Level
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" button [routerLink]="['/zonemap']" detail>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        Clarke Street - Level One
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-no-border" [style.display]="selectedSegment == 'map' ? 'block' : 'none'">
+  <ion-toolbar>
+    <ion-title>Click on map pointer to view the zones</ion-title>
+  </ion-toolbar>
+</ion-footer>

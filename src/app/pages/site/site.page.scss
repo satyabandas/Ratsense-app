@@ -1,0 +1,22 @@
+#map {
+    height: 100%;
+    position: static !important;
+    overflow: visible !important;
+}
+
+ion-toolbar {
+    ion-segment {
+        ion-segment-button {
+            --color-checked:#f36c0f;
+            --indicator-color:#f36c0f;
+            --indicator-height:3px;
+        }
+    }
+}
+
+ion-footer{
+    ion-title {
+        font-size: 0.90rem;
+        text-align: center;
+    }
+}

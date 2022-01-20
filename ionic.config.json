@@ -1,0 +1,7 @@
+{
+  "name": "RatsenseApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

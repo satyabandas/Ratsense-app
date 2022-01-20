@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "RatsenseApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,28 @@
+<ion-header translucent="true" class="ion-no-border">
+  <!-- <ion-toolbar>
+    <ion-title>loginform</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+  <ion-card class="top-gap">
+    <ion-img src="assets/images/login-bg.png"></ion-img>
+    <ion-card-content>
+      <div class="form-box text-center">
+        <h4>SIGN IN</h4>
+        <ion-item>
+          <ion-input placeholder="DISTRIBUTOR ID" clearInput type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="USERNAME" clearInput type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="PASSWORD" clearInput type="password"></ion-input>
+        </ion-item>
+        <div class="btn-wrap">
+          <ion-button [routerLink]="['/site']" expand="full" fill="solid" shape="round" class="btn-secondary">Login</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
